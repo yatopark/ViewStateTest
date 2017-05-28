@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="mainViewModel"
+            type="net.yatopark.viewstatetest.viewmodel.MainViewModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <net.yatopark.viewstatetest.view.StateView1
+            android:id="@+id/stateView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="@{stateView1.changeViewState(mainViewModel.viewStateObservable.viewState)}" />
+
+        <net.yatopark.viewstatetest.view.StateView2
+            android:id="@+id/stateView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="@{stateView2.changeViewState(mainViewModel.viewStateObservable.viewState)}" />
+
+        <net.yatopark.viewstatetest.view.StateView3
+            android:id="@+id/stateView3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="@{stateView3.changeViewState(mainViewModel.viewStateObservable.viewState)}" />
+
+        <net.yatopark.viewstatetest.view.StateView4
+            android:id="@+id/stateView4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="@{stateView4.changeViewState(mainViewModel.viewStateObservable.viewState)}" />
+
+    </FrameLayout>
+</layout>

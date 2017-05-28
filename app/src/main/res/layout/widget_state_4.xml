@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="net.yatopark.viewstatetest.viewmodel.MainViewState" />
+
+        <variable
+            name="mainViewModel"
+            type="net.yatopark.viewstatetest.viewmodel.MainViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/state_4"/>
+        <Button
+            android:id="@+id/goToState1Btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{(v) -> mainViewModel.setViewState(MainViewState.STATE1)}"
+            android:text="@string/go_to_state_1" />
+    </LinearLayout>
+</layout>
